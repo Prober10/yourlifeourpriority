@@ -8,8 +8,8 @@ export function Header({ activeLabel, menuOpen, setMenuOpen, navigate }) {
       <button className="brand" onClick={() => navigate('home')} aria-label="Go to home page">
         <LogoMark />
         <span>
-          <strong>Your Life</strong>
-          <small>Our Priority</small>
+          <strong>Roland Khalil</strong>
+          <small>Fulfilling Your Promise</small>
         </span>
       </button>
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">

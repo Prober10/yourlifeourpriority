@@ -50,7 +50,7 @@ button {
 .brand {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 12px;
   color: var(--navy);
   background: transparent;
   border: 0;
@@ -64,28 +64,36 @@ button {
 }
 
 .brand strong {
-  font-size: 20px;
+  color: #172868;
+  font-size: 18px;
   font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .brand small {
-  margin-top: 4px;
-  color: #9e731f;
-  font-size: 17px;
+  margin-top: 6px;
+  color: #343434;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .logo-mark {
   position: relative;
   display: inline-grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
-  color: var(--navy);
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50%;
 }
 
-.logo-mark svg:last-child {
-  position: absolute;
-  color: var(--gold);
+.logo-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .nav {
@@ -385,7 +393,7 @@ p {
 
 .cta-panel .logo-mark,
 .privacy-cta .logo-mark {
-  color: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .cta-panel h2,
@@ -1127,17 +1135,17 @@ p {
     padding: 16px 4vw;
   }
 
-  .brand strong {
-    font-size: 17px;
+  .logo-mark {
+    width: 42px;
+    height: 42px;
   }
 
-  .brand small {
+  .brand strong {
     font-size: 14px;
   }
 
-  .logo-mark {
-    width: 40px;
-    height: 40px;
+  .brand small {
+    font-size: 12px;
   }
 
   .home-hero,
