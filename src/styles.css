@@ -350,18 +350,20 @@ p {
   font-size: 18px;
 }
 
-.plan-card a,
+.plan-card .text-link,
 .plan-row button {
   display: inline-flex;
   gap: 8px;
   align-items: center;
   margin-top: auto;
   color: var(--navy);
+  background: transparent;
+  border: 0;
   text-decoration: none;
   font-weight: 900;
 }
 
-.plan-card a svg,
+.plan-card .text-link svg,
 .plan-row button svg {
   color: var(--gold);
 }
@@ -615,7 +617,200 @@ p {
   min-height: 88px;
   border-radius: 6px;
   opacity: 0.78;
-  background-image: linear-gradient(100deg, rgba(255,255,255,0.9), rgba(255,255,255,0.1)), radial-gradient(circle at 70% 44%, rgba(255,255,255,0.95) 0 10%, transparent 11%);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.08)),
+    var(--plan-image),
+    #dceaf7;
+  background-position: center;
+  background-size: cover;
+}
+
+.product-page {
+  padding: 34px 5vw 0;
+}
+
+.back-link {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  margin-bottom: 22px;
+  color: var(--navy);
+  background: transparent;
+  border: 0;
+  font-weight: 900;
+}
+
+.product-intro {
+  display: grid;
+  grid-template-columns: auto minmax(0, 780px);
+  gap: 22px;
+  align-items: center;
+  padding: 28px;
+  background: linear-gradient(135deg, #f8fbff, #fff7eb);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.product-intro h2,
+.section-kicker h2,
+.related-products h2 {
+  margin-bottom: 8px;
+  color: var(--navy);
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.product-intro p:last-child,
+.tier-grid p,
+.feature-grid p,
+.product-accordion li,
+.related-grid small {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: #9e731f;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.product-section {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.32fr) 1fr;
+  gap: 30px;
+  padding: 42px 0 0;
+}
+
+.section-kicker {
+  align-self: start;
+}
+
+.tier-grid,
+.feature-grid,
+.related-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.tier-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tier-grid article,
+.feature-grid article,
+.product-accordion,
+.related-grid button {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(7, 43, 102, 0.08);
+}
+
+.tier-grid article {
+  min-height: 190px;
+  padding: 22px;
+}
+
+.tier-grid span {
+  display: inline-flex;
+  margin-bottom: 20px;
+  padding: 7px 12px;
+  color: #fff;
+  background: var(--navy);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.tier-grid h3,
+.feature-grid h3 {
+  color: var(--navy);
+  font-size: 20px;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.feature-grid article {
+  padding: 24px;
+}
+
+.feature-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 18px;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.product-accordions {
+  display: grid;
+  gap: 12px;
+}
+
+.product-accordion button {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+  padding: 20px 24px;
+  color: var(--navy);
+  text-align: left;
+  background: transparent;
+  border: 0;
+}
+
+.product-accordion.open svg {
+  transform: rotate(180deg);
+}
+
+.product-accordion ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0 24px 24px 44px;
+}
+
+.related-products {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) 1fr;
+  gap: 30px;
+  align-items: start;
+  padding: 48px 0 8px;
+}
+
+.related-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.related-grid button {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  min-height: 190px;
+  padding: 22px;
+  text-align: left;
+}
+
+.related-grid .icon-badge {
+  width: 54px;
+  height: 54px;
+}
+
+.related-grid strong {
+  color: var(--navy);
+  font-size: 18px;
+}
+
+.related-grid svg:last-child {
+  color: var(--gold);
 }
 
 .faq-list {
@@ -877,7 +1072,10 @@ p {
 
   .feature-strip,
   .plan-grid,
-  .value-grid {
+  .value-grid,
+  .tier-grid,
+  .feature-grid,
+  .related-grid {
     grid-template-columns: 1fr;
   }
 
@@ -895,6 +1093,12 @@ p {
 
   .plan-row button {
     grid-column: 2;
+  }
+
+  .product-intro,
+  .product-section,
+  .related-products {
+    grid-template-columns: 1fr;
   }
 
   .cta-panel,

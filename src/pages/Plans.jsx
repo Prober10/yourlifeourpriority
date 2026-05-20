@@ -14,7 +14,7 @@ export function Plans({ navigate }) {
         imageLabel="Hands protecting a family symbol"
       />
       <section className="plans-list">
-        {plans.map(({ title, copy, Icon, tone }) => (
+        {plans.map(({ slug, title, copy, Icon, tone, image }) => (
           <article key={title} className="plan-row">
             <span className={`icon-badge ${tone}`}>
               <Icon size={34} />
@@ -23,8 +23,8 @@ export function Plans({ navigate }) {
               <h2>{title}</h2>
               <p>{copy}</p>
             </div>
-            <div className={`plan-photo ${tone}`} aria-hidden="true" />
-            <button onClick={() => navigate('contact')}>
+            <div className="plan-photo" aria-hidden="true" style={{ '--plan-image': `url(${image})` }} />
+            <button onClick={() => navigate(`product:${slug}`)}>
               Learn More <ArrowRight size={17} />
             </button>
           </article>

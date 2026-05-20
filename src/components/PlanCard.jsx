@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 
-export function PlanCard({ title, short, Icon, tone }) {
+export function PlanCard({ title, short, Icon, tone, onClick }) {
   return (
     <article className="plan-card">
       <span className={`icon-badge ${tone}`}>
@@ -8,9 +8,9 @@ export function PlanCard({ title, short, Icon, tone }) {
       </span>
       <h3>{title}</h3>
       <p>{short}</p>
-      <a href="#plans" onClick={(event) => event.preventDefault()}>
+      <button className="text-link" onClick={onClick}>
         Learn More <ArrowRight size={16} />
-      </a>
+      </button>
     </article>
   );
 }

@@ -19,7 +19,7 @@ export function Home({ navigate }) {
         </div>
       </section>
       <FeatureStrip />
-      <PlansGrid />
+      <PlansGrid navigate={navigate} />
       <CTA title="Let's build your secure future together." text="We're here to protect what matters most." button="Get in Touch" onClick={() => navigate('contact')} />
       <div className="trust-row">
         <span>★★★★★</span>
