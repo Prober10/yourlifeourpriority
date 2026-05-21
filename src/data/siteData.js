@@ -176,6 +176,34 @@ export const plans = [
       ['Requirements & Timelines', ['Entry from 1 month up to a maximum of 20 years old for MetEducation.', 'Blessings active from policy year 2 for the first event and year 3 for the second event.']],
     ],
   },
+  {
+    slug: 'metretirement-horizon-wealth',
+    title: 'MetRetirement / Horizon Wealth',
+    copy: 'A pure, flexible wealth-building framework designed for retirement growth without forced insurance deductions.',
+    short: 'Flexible retirement growth with global fund access.',
+    Icon: Banknote,
+    tone: 'pink',
+    image: heroImages.plans,
+    hero: {
+      title: 'Build Your Capital.',
+      gold: 'Shape Your Ultimate Horizon.',
+      text: 'A pure, flexible wealth-building framework built for retirement growth without forced insurance deductions.',
+    },
+    tiers: [
+      ['Global Growth', 'Access to five international mutual funds.'],
+      ['Flexible Funding', 'Choose 1, 2, 5, 10-pay, or regular schedules.'],
+      ['Pure Preservation', 'Zero built-in cost-of-insurance drains.'],
+      ['Strategic Add-Ons', 'Optional unbundled accident and health safety riders.'],
+    ],
+    features: [
+      ['Inflation Shield', 'Premium indexation options of 2%, 4%, or 6%.', PiggyBank],
+      ['Event Blessings', 'Monthly premium rewards up to $500 for major life milestones.', Star],
+      ['Market Access', 'Diversified choice across five international mutual funds.', Target],
+    ],
+    accordions: [
+      ['Technical Metrics', ['Entry ages from 21 to 85, with maturity at age 95.', 'Maturity benefit pays 100% of account value as a lump-sum distribution.', 'Death benefit pays the total account value at the time of event.', 'Payment frequencies can be monthly, quarterly, semi-annual, or annual.']],
+    ],
+  },
 ];
 
 export const faqs = [
