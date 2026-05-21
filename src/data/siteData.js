@@ -11,8 +11,8 @@ import {
   HeartPulse,
   HeartHandshake,
   Mail,
+  Phone,
   PiggyBank,
-  Share2,
   Shield,
   Star,
   Target,
@@ -206,10 +206,9 @@ export const values = [
 ];
 
 export const contactMethods = [
-  [Mail, 'Email', 'yourlife@ourpriority.com', 'email'],
-  [HeartHandshake, 'WhatsApp', '+123 456 7890', 'whatsapp'],
-  [Share2, 'Facebook', 'facebook.com/yourlifeourpriority', 'facebook'],
-  [Camera, 'Instagram', 'instagram.com/yourlifeourpriority', 'instagram'],
+  [Phone, 'Phone', '+961 03 187 060', 'phone', 'tel:+9613187060'],
+  [HeartHandshake, 'WhatsApp', '+961 03 187 060', 'whatsapp', 'https://wa.me/9613187060'],
+  [Camera, 'Instagram', '@ask.roland', 'instagram', 'https://www.instagram.com/ask.roland'],
 ];
 
 export const privacyItems = [

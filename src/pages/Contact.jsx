@@ -1,4 +1,3 @@
-import { Send } from 'lucide-react';
 import { Hero } from '../components/Hero.jsx';
 import { LogoMark } from '../components/LogoMark.jsx';
 import { contactMethods, heroImages } from '../data/siteData.js';
@@ -16,18 +15,18 @@ export function Contact() {
       <section className="contact-section">
         <div className="contact-details">
           <h2>Get in Touch</h2>
-          <p>Reach out to us through any of the following channels.</p>
-          {contactMethods.map(([Icon, label, value, tone]) => (
-            <ContactMethod key={label} Icon={Icon} label={label} value={value} tone={tone} />
-          ))}
+          <p>Reach out directly through phone, WhatsApp, or Instagram.</p>
+          <div className="contact-method-grid">
+            {contactMethods.map(([Icon, label, value, tone, href]) => (
+              <ContactMethod key={label} Icon={Icon} label={label} value={value} tone={tone} href={href} />
+            ))}
+          </div>
         </div>
-        <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
-          <label>Full Name<input type="text" placeholder="Your full name" /></label>
-          <label>Email Address<input type="email" placeholder="Your email address" /></label>
-          <label>Phone Number<input type="tel" placeholder="Your phone number" /></label>
-          <label>Message<textarea placeholder="How can we help you?" rows="5" /></label>
-          <button className="gold-cta" type="submit">Send Message <Send size={18} /></button>
-        </form>
+        <div className="contact-support-card">
+          <LogoMark />
+          <h2>Questions about your coverage?</h2>
+          <p>Choose the channel that works best for you and we will help you find the right protection for your needs.</p>
+        </div>
       </section>
       <section className="wide-photo-cta">
         <LogoMark />
@@ -37,14 +36,14 @@ export function Contact() {
   );
 }
 
-function ContactMethod({ Icon, label, value, tone = 'email' }) {
+function ContactMethod({ Icon, label, value, tone = 'email', href }) {
   return (
-    <article className="contact-method">
+    <a className="contact-method" href={href} target={href?.startsWith('http') ? '_blank' : undefined} rel={href?.startsWith('http') ? 'noreferrer' : undefined}>
       <span className={tone}><Icon size={28} /></span>
       <div>
         <h3>{label}</h3>
         <p>{value}</p>
       </div>
-    </article>
+    </a>
   );
 }
