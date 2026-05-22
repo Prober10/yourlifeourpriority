@@ -1,8 +1,41 @@
+import { Send } from 'lucide-react';
+import { useState } from 'react';
 import { Hero } from '../components/Hero.jsx';
 import { LogoMark } from '../components/LogoMark.jsx';
 import { contactMethods, heroImages } from '../data/siteData.js';
 
 export function Contact() {
+  const [formStatus, setFormStatus] = useState({ state: 'idle', message: '' });
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const payload = Object.fromEntries(new FormData(form));
+
+    setFormStatus({ state: 'loading', message: 'Sending your message...' });
+
+    try {
+      const response = await fetch('/.netlify/functions/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Message could not be sent.');
+      }
+
+      form.reset();
+      setFormStatus({ state: 'success', message: 'Message sent successfully.' });
+    } catch (error) {
+      setFormStatus({
+        state: 'error',
+        message: error.message || 'Message could not be sent. Please try WhatsApp instead.',
+      });
+    }
+  }
+
   return (
     <>
       <Hero
@@ -22,11 +55,33 @@ export function Contact() {
             ))}
           </div>
         </div>
-        <div className="contact-support-card">
-          <LogoMark />
-          <h2>Questions about your coverage?</h2>
-          <p>Choose the channel that works best for you and we will help you find the right protection for your needs.</p>
-        </div>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Your full name" autoComplete="name" required />
+          </label>
+          <label>
+            Email Address
+            <input type="email" name="email" placeholder="Your email address" autoComplete="email" required />
+          </label>
+          <label>
+            Phone Number
+            <input type="tel" name="phone" placeholder="Your phone number" autoComplete="tel" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="How can we help you?" required />
+          </label>
+          <button className="gold-cta" type="submit" disabled={formStatus.state === 'loading'}>
+            {formStatus.state === 'loading' ? 'Sending...' : 'Send Message'}
+            <Send size={18} />
+          </button>
+          {formStatus.message ? (
+            <p className={`form-status ${formStatus.state}`} role="status" aria-live="polite">
+              {formStatus.message}
+            </p>
+          ) : null}
+        </form>
       </section>
       <section className="wide-photo-cta">
         <LogoMark />

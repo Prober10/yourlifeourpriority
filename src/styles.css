@@ -975,6 +975,28 @@ p {
   box-shadow: 0 0 0 4px rgba(220, 162, 58, 0.14);
 }
 
+.contact-form .gold-cta {
+  width: 100%;
+}
+
+.contact-form .gold-cta:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.form-status {
+  margin: 0;
+  font-weight: 800;
+}
+
+.form-status.success {
+  color: #0f766e;
+}
+
+.form-status.error {
+  color: #b42318;
+}
+
 .wide-photo-cta {
   display: grid;
   grid-template-columns: auto minmax(0, 520px) 1fr;

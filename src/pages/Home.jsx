@@ -9,8 +9,8 @@ export function Home({ navigate }) {
       <section className="home-hero" style={{ '--home-image': `url(${heroImages.home})` }}>
         <div className="home-hero-content">
           <h1>
-            Secure Today
-            <span>Protect Tomorrow</span>
+            Fulfilling
+            <span>Your Promise</span>
           </h1>
           <p>Comprehensive insurance plans for you and your loved ones.</p>
           <button className="gold-cta" onClick={() => navigate('plans')}>
