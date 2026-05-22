@@ -630,8 +630,9 @@ p {
     linear-gradient(90deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.08)),
     var(--plan-image),
     #dceaf7;
-  background-position: center;
-  background-size: cover;
+  background-position: center, var(--plan-position, right center), center;
+  background-repeat: no-repeat;
+  background-size: cover, cover, cover;
 }
 
 .product-page {

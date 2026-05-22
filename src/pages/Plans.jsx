@@ -3,6 +3,15 @@ import { CTA } from '../components/CTA.jsx';
 import { Hero } from '../components/Hero.jsx';
 import { heroImages, plans } from '../data/siteData.js';
 
+const planPhotoFocus = {
+  'critical-protect': 'right 72%',
+  'advantage-plan': 'right 58%',
+  'circles-of-protection': 'right center',
+  'term-protect': 'right 58%',
+  meteducation: 'right center',
+  'metretirement-horizon-wealth': 'right center',
+};
+
 export function Plans({ navigate }) {
   return (
     <>
@@ -23,7 +32,14 @@ export function Plans({ navigate }) {
               <h2>{title}</h2>
               <p>{copy}</p>
             </div>
-            <div className="plan-photo" aria-hidden="true" style={{ '--plan-image': `url(${image})` }} />
+            <div
+              className="plan-photo"
+              aria-hidden="true"
+              style={{
+                '--plan-image': `url(${image})`,
+                '--plan-position': planPhotoFocus[slug],
+              }}
+            />
             <button onClick={() => navigate(`product:${slug}`)}>
               Learn More <ArrowRight size={17} />
             </button>
