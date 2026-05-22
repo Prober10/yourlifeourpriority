@@ -42,7 +42,7 @@ export const heroImages = {
 export const plans = [
   {
     slug: 'critical-protect',
-    title: 'Critical Protect',
+    title: 'Critical Illness Plan',
     copy: 'Immediate financial support during major medical crises, so recovery can come before bills.',
     short: 'Cash support when recovery matters most.',
     Icon: HeartPulse,
@@ -70,7 +70,7 @@ export const plans = [
   },
   {
     slug: 'advantage-plan',
-    title: 'The Advantage Plan',
+    title: 'Retirement Plan',
     copy: 'Reliable life insurance protection paired with strategic capital growth opportunities.',
     short: 'Protection today with legacy-building potential.',
     Icon: PiggyBank,
@@ -98,7 +98,7 @@ export const plans = [
   },
   {
     slug: 'circles-of-protection',
-    title: 'Circles of Protection',
+    title: 'Personal Accident',
     copy: 'A standalone cash cushion for designated accident injuries when it is needed most.',
     short: 'Accident protection with direct cash support.',
     Icon: Bone,
@@ -126,7 +126,7 @@ export const plans = [
   },
   {
     slug: 'term-protect',
-    title: 'Term Protect',
+    title: 'Life Insurance',
     copy: 'Straightforward protection for a specified period, built to protect loved ones.',
     short: 'Simple protection for pure peace of mind.',
     Icon: Users,
@@ -150,7 +150,7 @@ export const plans = [
   },
   {
     slug: 'meteducation',
-    title: 'MetEducation',
+    title: 'Education Plan',
     copy: 'Financial accumulation with a specialized rider that keeps school tuition secure.',
     short: 'Secure academic milestones and tuition funding.',
     Icon: GraduationCap,
@@ -178,7 +178,7 @@ export const plans = [
   },
   {
     slug: 'metretirement-horizon-wealth',
-    title: 'MetRetirement / Horizon Wealth',
+    title: 'Horizon Wealth',
     copy: 'A pure, flexible wealth-building framework designed for retirement growth without forced insurance deductions.',
     short: 'Flexible retirement growth with global fund access.',
     Icon: Banknote,

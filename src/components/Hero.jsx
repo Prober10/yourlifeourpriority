@@ -1,4 +1,3 @@
-import { Shield } from 'lucide-react';
 import { SectionDivider } from './SectionDivider.jsx';
 
 export function Hero({ title, gold, text, variant, image, imageLabel }) {
@@ -12,13 +11,7 @@ export function Hero({ title, gold, text, variant, image, imageLabel }) {
         <p>{text}</p>
         <SectionDivider />
       </div>
-      <div className="hero-visual" role="img" aria-label={imageLabel} style={{ '--hero-image': `url(${image})` }}>
-        <div className="visual-card">
-          <Shield size={48} />
-          <strong>Your Security</strong>
-          <small>Our Commitment</small>
-        </div>
-      </div>
+      <div className="hero-visual" role="img" aria-label={imageLabel} style={{ '--hero-image': `url(${image})` }} />
     </section>
   );
 }
