@@ -17,6 +17,11 @@ export function Home({ navigate }) {
             Explore Our Plans <ArrowRight size={18} />
           </button>
         </div>
+        <div className="home-hero-photo">
+          <figure className="home-hero-frame">
+            <img src={heroImages.home} alt="Roland Khalil" />
+          </figure>
+        </div>
       </section>
       <FeatureStrip />
       <PlansGrid navigate={navigate} />

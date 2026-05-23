@@ -31,7 +31,7 @@ export const pageSlugs = {
 };
 
 export const heroImages = {
-  home: '/images/home-roland-hero.png',
+  home: '/images/home-roland-portrait.jpeg',
   about: '/images/about-hero.png',
   plans: '/images/plans-overview-hero.png',
   critical: '/images/plans-hero.png',
