@@ -14,7 +14,7 @@ export function ProductDetail({ product, navigate }) {
         title={product.hero.title}
         gold={product.hero.gold}
         text={product.hero.text}
-        variant="plans"
+        variant="product"
         image={product.image}
         imageLabel={`${product.title} product visual`}
       />

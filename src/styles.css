@@ -99,7 +99,7 @@ button {
 .nav {
   display: flex;
   justify-content: center;
-  gap: clamp(16px, 3vw, 48px);
+  gap: clamp(16px, 2.4vw, 42px);
 }
 
 .nav button,
@@ -110,6 +110,7 @@ button {
   background: transparent;
   border: 0;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .nav button::after {
@@ -494,6 +495,21 @@ p {
   background-size: cover;
 }
 
+.hero-product {
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+}
+
+.hero-product .hero-visual {
+  clip-path: none;
+  background:
+    linear-gradient(90deg, rgba(237, 244, 251, 0.28), rgba(237, 244, 251, 0.06)),
+    var(--hero-image),
+    #e8f2fb;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover, contain, cover;
+}
+
 .hero-faq .hero-visual {
   background:
     linear-gradient(90deg, rgba(237, 244, 251, 0.22), rgba(237, 244, 251, 0)),
@@ -626,7 +642,7 @@ p {
 
 .plan-row {
   display: grid;
-  grid-template-columns: auto 1.3fr 1fr auto;
+  grid-template-columns: auto minmax(260px, 1.35fr) minmax(260px, 0.95fr) auto;
   gap: 26px;
   align-items: center;
   min-height: 122px;
@@ -644,7 +660,9 @@ p {
 }
 
 .plan-photo {
+  width: 100%;
   min-height: 88px;
+  min-width: 0;
   border-radius: 6px;
   opacity: 0.78;
   background:
@@ -939,6 +957,7 @@ p {
 .phone { background: var(--navy); }
 .whatsapp { background: #12ad8b; }
 .facebook { background: #1e62bf; }
+.linkedin { background: #0a66c2; }
 .instagram { background: linear-gradient(135deg, #f9bb45, #e3407b, #5b4acf); }
 
 .contact-method h3,
@@ -1110,12 +1129,48 @@ p {
 }
 
 @media (max-width: 1180px) {
+  .site-header {
+    gap: 18px;
+    padding-right: 4vw;
+    padding-left: 4vw;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav button {
+    font-size: 14px;
+  }
+
+  .quote-button {
+    min-height: 44px;
+    padding: 0 18px;
+  }
+
   .plan-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .feature-strip {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plan-row {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 18px 22px;
+  }
+
+  .plan-photo {
+    grid-column: 2 / -1;
+    grid-row: 2;
+    min-height: 96px;
+  }
+
+  .plan-row button {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
   }
 }
 
@@ -1181,6 +1236,10 @@ p {
 
   .hero-visual {
     min-height: 270px;
+  }
+
+  .hero-product .hero-visual {
+    min-height: 300px;
   }
 
   .feature-strip,
@@ -1285,5 +1344,9 @@ p {
 
   .plan-row {
     padding: 18px;
+  }
+
+  .hero-product .hero-visual {
+    min-height: 230px;
   }
 }

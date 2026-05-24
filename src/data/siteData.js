@@ -1,8 +1,8 @@
 import {
+  Accessibility,
   ArrowRight,
   Baby,
   Banknote,
-  Bone,
   BookOpen,
   Camera,
   Check,
@@ -13,9 +13,11 @@ import {
   Mail,
   Phone,
   PiggyBank,
+  Share2,
   Shield,
   Star,
   Target,
+  TrendingUp,
   Users,
 } from 'lucide-react';
 
@@ -32,6 +34,7 @@ export const pageSlugs = {
 
 export const heroImages = {
   home: '/images/home-roland-portrait.jpeg',
+  homeFamily: '/images/home-hero.png',
   about: '/images/about-hero.png',
   plans: '/images/plans-overview-hero.png',
   critical: '/images/plans-hero.png',
@@ -75,7 +78,7 @@ export const plans = [
     short: 'Protection today with legacy-building potential.',
     Icon: PiggyBank,
     tone: 'green',
-    image: heroImages.home,
+    image: heroImages.homeFamily,
     hero: {
       title: 'Protect Your Family Today.',
       gold: 'Build Your Legacy for Tomorrow.',
@@ -101,7 +104,7 @@ export const plans = [
     title: 'Personal Accident',
     copy: 'A standalone cash cushion for designated accident injuries when it is needed most.',
     short: 'Accident protection with direct cash support.',
-    Icon: Bone,
+    Icon: Accessibility,
     tone: 'purple',
     image: heroImages.about,
     hero: {
@@ -181,7 +184,7 @@ export const plans = [
     title: 'Horizon Wealth',
     copy: 'A pure, flexible wealth-building framework designed for retirement growth without forced insurance deductions.',
     short: 'Flexible retirement growth with global fund access.',
-    Icon: Banknote,
+    Icon: TrendingUp,
     tone: 'pink',
     image: heroImages.plans,
     hero: {
@@ -236,6 +239,7 @@ export const values = [
 export const contactMethods = [
   [Phone, 'Phone', '+961 03 187 060', 'phone', 'tel:+9613187060'],
   [HeartHandshake, 'WhatsApp', '+961 03 187 060', 'whatsapp', 'https://wa.me/9613187060'],
+  [Share2, 'LinkedIn', 'linkedin.com/in/askroland', 'linkedin', 'https://linkedin.com/in/askroland'],
   [Camera, 'Instagram', '@ask.roland', 'instagram', 'https://www.instagram.com/ask.roland'],
 ];
 
