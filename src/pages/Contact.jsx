@@ -47,8 +47,6 @@ export function Contact() {
       />
       <section className="contact-section">
         <div className="contact-details">
-          <h2>Get in Touch</h2>
-          <p>Reach out directly through phone, WhatsApp, or Instagram.</p>
           <div className="contact-method-grid">
             {contactMethods.map(([Icon, label, value, tone, href]) => (
               <ContactMethod key={label} Icon={Icon} label={label} value={value} tone={tone} href={href} />

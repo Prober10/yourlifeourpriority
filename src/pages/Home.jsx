@@ -16,6 +16,15 @@ export function Home({ navigate }) {
           <button className="gold-cta" onClick={() => navigate('plans')}>
             Explore Our Plans <ArrowRight size={18} />
           </button>
+          <div className="home-hero-stats" aria-label="Client service highlights">
+            {heroStats.map(({ value, label, detail }) => (
+              <article key={label}>
+                <strong>{value}</strong>
+                <h3>{label}</h3>
+                <p>{detail}</p>
+              </article>
+            ))}
+          </div>
         </div>
         <div className="home-hero-photo">
           <figure className="home-hero-frame">
@@ -34,6 +43,13 @@ export function Home({ navigate }) {
     </>
   );
 }
+
+const heroStats = [
+  { value: '11+', label: 'Years', detail: 'Of dedicated service' },
+  { value: '$450K+', label: 'Claims Paid', detail: 'Support delivered' },
+  { value: '500+', label: 'Clients', detail: 'Families guided' },
+  { value: '1,000+', label: 'Policies', detail: 'Served across life stages' },
+];
 
 function FeatureStrip() {
   return (
