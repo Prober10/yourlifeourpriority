@@ -242,15 +242,16 @@ p {
 
 .home-hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
   max-width: 840px;
   margin-top: 34px;
 }
 
 .home-hero-stats article {
-  min-height: 116px;
-  padding: 18px;
+  min-width: 0;
+  min-height: 108px;
+  padding: 16px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
@@ -261,14 +262,16 @@ p {
   display: block;
   margin-bottom: 10px;
   color: var(--gold-2);
-  font-size: clamp(26px, 3vw, 42px);
+  font-size: clamp(26px, 2.6vw, 38px);
   line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .home-hero-stats h3 {
   margin-bottom: 5px;
   color: #fff;
   font-size: 15px;
+  line-height: 1.15;
 }
 
 .home-hero-stats p {
@@ -1187,7 +1190,7 @@ p {
   }
 
   .home-hero-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
     max-width: 520px;
   }
 
@@ -1217,7 +1220,7 @@ p {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .site-header {
     grid-template-columns: auto auto;
     gap: 14px;
@@ -1278,7 +1281,8 @@ p {
   }
 
   .home-hero-stats {
-    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
     max-width: 100%;
     margin-top: 24px;
   }
