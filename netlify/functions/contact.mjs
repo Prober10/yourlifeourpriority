@@ -2,7 +2,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const toEmail = process.env.CONTACT_TO_EMAIL || 'ask.rolandadvisory@gmail.com';
-const fromEmail = process.env.RESEND_FROM_EMAIL || 'Roland Khalil <onboarding@resend.dev>';
+const fromEmail = process.env.RESEND_FROM_EMAIL || 'AskRoland <rolandkhalil@askroland.me>';
 
 export default async function handler(request) {
   if (request.method !== 'POST') {
